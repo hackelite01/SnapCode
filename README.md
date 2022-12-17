@@ -6,7 +6,7 @@
 
 ## Deploy On Vercel
 
-Deploy you own [SnapCode](snapcode.cf) on vercel from [HERE](https://vercel.com/new)
+Deploy you own [SnapCode](https://www.snapcode.cf) on vercel from [HERE](https://vercel.com/new)
 
 ## [Docker Support 🐳](https://www.docker.com/)
 
