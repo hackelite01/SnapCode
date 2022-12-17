@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { FaGithub, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaInstagram } from "react-icons/fa";
 import BuyMeACoffeeButton from "./BuyMeACoffeeButton";
 
 const Header = () => {
@@ -31,12 +31,12 @@ const Header = () => {
       </div>
       <div className="flex-1"></div>
       <a
-        href="https://www.snapcode.cf"
+        href="https://www.instagram.com/the.mayank.rajput/"
         target="_blank"
         rel="noreferrer"
         className="w-10 h-10 flex items-center justify-center hover:bg-white/10 active:bg-white/20 rounded-full"
       >
-        <FaTwitter className="text-2xl" />
+        <FaInstagram className="text-2xl" />
       </a>
       <a
         href="https://github.com/hackelite01/SnapCode"
