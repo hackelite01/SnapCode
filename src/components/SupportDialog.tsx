@@ -35,7 +35,7 @@ const SupportDialog = () => {
               </a>
             </Link>{" "}
             ✌️. Creator of <b>SnapCode</b>. I&apos;m an indie full-stack
-            freelance developer living in India 🇮🇳. I make software and
+            developer living in India 🇮🇳. I make software and
             services that help people like you and me in their daily life. This
             service is 100% ad-free 🥳. I don&apos;t want to break the user
             experience by showing ads to my users. BTW, You can still support me
