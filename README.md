@@ -3,6 +3,7 @@
 ![WebApp Screenshot](./screenshots/Screenshot.png)
 
 ---
+[![CodeFactor](https://www.codefactor.io/repository/github/hackelite01/snapcode/badge/main)](https://www.codefactor.io/repository/github/hackelite01/snapcode/overview/main)
 
 ## Deploy On Vercel
 
