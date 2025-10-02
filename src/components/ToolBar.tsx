@@ -8,12 +8,45 @@ import { useAtom } from "jotai";
 import { appStateAtom } from "../stores/appState";
 import { exportSettingsAtom } from "../stores/exportSettings";
 import { useSupportDialog } from "../contexts/SupportDialogContext";
+import { useKeyboardShortcuts } from "../hooks/useKeyboardShortcuts";
+import { Tooltip } from "./Tooltip";
+import { useEffect } from "react";
 
 const ToolBar = () => {
   const [appState, setAppState] = useAtom(appStateAtom);
   const [exportSettings, setExportSettings] = useAtom(exportSettingsAtom);
   const { onExport, onCopyAsLink, onCopyAsImage, onReset } = useEditor();
   const { openSupportDialog } = useSupportDialog();
+
+  // Keyboard shortcuts
+  useKeyboardShortcuts([
+    {
+      key: "s",
+      ctrl: true,
+      callback: (e) => {
+        e.preventDefault();
+        onExport();
+      },
+    },
+    {
+      key: "c",
+      ctrl: true,
+      shift: true,
+      callback: (e) => {
+        e.preventDefault();
+        onCopyAsImage();
+      },
+    },
+    {
+      key: "r",
+      ctrl: true,
+      callback: (e) => {
+        e.preventDefault();
+        onReset();
+      },
+    },
+  ]);
+
   return (
     <div className="fixed bottom-0 w-full left-0 right-0 p-4 md:p-8 z-20 pointer-events-none">
       <div className="mx-auto max-w-fit min-w-0 pointer-events-auto">
@@ -167,12 +200,14 @@ const ToolBar = () => {
               }}
             />
             <div className="flex h-10 rounded-md">
-              <button
-                onClick={() => onExport()}
-                className="bg-primary-500 hover:bg-primary-600 px-4 flex items-center justify-center h-full border-r border-r-primary-600 truncate rounded-l-md text-white"
-              >
-                Export
-              </button>
+              <Tooltip content="Export image" shortcut="Ctrl+S">
+                <button
+                  onClick={() => onExport()}
+                  className="bg-primary-500 hover:bg-primary-600 px-4 flex items-center justify-center h-full border-r border-r-primary-600 truncate rounded-l-md text-white"
+                >
+                  Export
+                </button>
+              </Tooltip>
               <DropdownMenu.Root>
                 <DropdownMenu.Trigger asChild>
                   <button className="bg-primary-500 hover:bg-primary-600 w-10 flex items-center justify-center h-full truncate rounded-r-md">
@@ -210,12 +245,14 @@ const ToolBar = () => {
                 </DropdownMenu.Content>
               </DropdownMenu.Root>
             </div>
-            <button
-              onClick={() => onReset()}
-              className="bg-gray-500/10 hover:bg-gray-500/20 px-4 flex items-center justify-center rounded-md h-10"
-            >
-              Reset
-            </button>
+            <Tooltip content="Reset to defaults" shortcut="Ctrl+R">
+              <button
+                onClick={() => onReset()}
+                className="bg-gray-500/10 hover:bg-gray-500/20 px-4 flex items-center justify-center rounded-md h-10"
+              >
+                Reset
+              </button>
+            </Tooltip>
           </div>
         </div>
       </div>
