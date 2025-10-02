@@ -1,0 +1,50 @@
+name: Documentation Improvement
+description: Suggest improvements to documentation
+title: "[DOCS] "
+labels: ["documentation"]
+assignees: []
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Documentation Issue
+      description: What documentation needs to be improved?
+      placeholder: Describe what documentation is missing, unclear, or needs updating...
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: Where is this documentation located?
+      placeholder: e.g., README.md, CONTRIBUTING.md, specific section/page
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Current Content
+      description: What does the current documentation say?
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed Changes
+      description: What changes would you suggest?
+      placeholder: Describe the improvements you'd like to see...
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Why is this improvement needed? Any additional context?
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched for similar documentation issues
+          required: true
+        - label: This improvement would help other contributors/users
+          required: true
