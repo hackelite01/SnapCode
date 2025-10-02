@@ -14,6 +14,9 @@ import { wast } from "@codemirror/lang-wast";
 import { lezer } from "@codemirror/lang-lezer";
 import { sql } from "@codemirror/lang-sql";
 import { php } from "@codemirror/lang-php";
+import { go } from "@codemirror/lang-go";
+import { sass } from "@codemirror/lang-sass";
+import { yaml } from "@codemirror/lang-yaml";
 
 export const getExtentions = (language: string): Extension[] => {
   switch (language) {
@@ -59,6 +62,16 @@ export const getExtentions = (language: string): Extension[] => {
       return [sql()];
     case "php":
       return [php()];
+    case "go":
+      return [go()];
+    case "golang":
+      return [go()];
+    case "sass":
+      return [sass()];
+    case "yaml":
+      return [yaml()];
+    case "yml":
+      return [yaml()];
     default:
       return undefined;
   }
