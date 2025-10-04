@@ -1,6 +1,7 @@
 import { useAtom } from "jotai";
 import Preview from "../src/components/Preview";
 import ToolBar from "../src/components/ToolBar";
+import { KeyboardShortcutsHelp } from "../src/components/KeyboardShortcutsHelp";
 import { appStateAtom } from "../src/stores/appState";
 
 function IndexPage() {
@@ -21,6 +22,7 @@ function IndexPage() {
         </aside>
       </div>
       <ToolBar />
+      <KeyboardShortcutsHelp />
     </>
   );
 }
