@@ -111,14 +111,17 @@ const ToolBar = () => {
                 "markdown",
                 "css",
                 "scss",
+                "sass",
                 "java",
                 "json",
                 "xml",
+                "yaml",
                 "text",
                 "wast",
                 "lezer",
                 "sql",
                 "php",
+                "go",
                 "swift",
               ].sort((a, b) => (a < b ? -1 : 1))}
               value={appState.language}

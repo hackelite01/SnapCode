@@ -82,17 +82,19 @@ docker-compose up -d
 
 ## 📋 Supported Languages
 
-- JavaScript/TypeScript
+- JavaScript/TypeScript/JSX
 - Python
 - Java
-- C/C++
+- C/C++/C#
 - PHP
 - Rust
 - Go
-- Ruby
-- HTML/CSS
+- Swift
+- HTML/CSS/SCSS/SASS
 - SQL
 - JSON
+- YAML
+- XML
 - Markdown
 - And more!
 
